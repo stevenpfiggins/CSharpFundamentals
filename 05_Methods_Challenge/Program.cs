@@ -14,7 +14,7 @@ namespace _05_Methods_Challenge
         static decimal totalCharge;
         static string name;
         static int userAge;
-        static decimal carMiles;
+        static double carMiles;
         static string accident;
         static string carYear;
         static bool additionalCar;
@@ -60,10 +60,10 @@ namespace _05_Methods_Challenge
             return input;
         }
 
-        static decimal ParseStringToDec()
+        static double ParseStringToDouble()
         {
             string inputString = Console.ReadLine();
-            decimal input = decimal.Parse(inputString);
+            double input = double.Parse(inputString);
             return input;
         }
 
@@ -92,7 +92,7 @@ namespace _05_Methods_Challenge
             Console.WriteLine("What year is this car?");
             carYear = Console.ReadLine();
             Console.WriteLine("How many miles on the odometer?");
-            carMiles = ParseStringToDec();
+            carMiles = ParseStringToDouble();
             Console.WriteLine("Has this car been in an accident? (yes/no)");
             accident = Console.ReadLine().ToLower();
             Console.WriteLine($"Do you own another car? (yes/no)");
@@ -112,7 +112,7 @@ namespace _05_Methods_Challenge
             Console.WriteLine("What year is your car?");
             carYear = Console.ReadLine();
             Console.WriteLine("How many miles on the odometer?");
-            carMiles = ParseStringToDec();
+            carMiles = ParseStringToDouble();
             Console.WriteLine("Have you been in an accident? (yes/no)");
             accident = Console.ReadLine().ToLower();
             Console.WriteLine($"Do you own another car? (yes/no)");
@@ -146,11 +146,11 @@ namespace _05_Methods_Challenge
             {
                 ageCharge = 125.00m;
             }
-            if (carMiles > 50000.00m && carMiles <= 100000.00m)
+            if (carMiles > 50000.00d && carMiles <= 100000.00d)
             {
                 mileCharge = 25.00m;
             }
-            else if (carMiles > 100000.00m)
+            else if (carMiles > 100000.00d)
             {
                 mileCharge = 50.00m;
             }
